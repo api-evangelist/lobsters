@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/json-schema/tag.json",
+  "title": "Tag",
+  "description": "A community-maintained taxonomy tag for categorizing Lobsters stories",
+  "type": "object",
+  "properties": {
+    "tag": {
+      "type": "string",
+      "description": "Unique tag identifier/slug",
+      "pattern": "^[A-Za-z0-9_\\-+]+$",
+      "maxLength": 25,
+      "example": "programming"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "Short human-readable description of what the tag covers",
+      "maxLength": 100
+    },
+    "privileged": {
+      "type": "boolean",
+      "description": "Whether this tag can only be applied by moderators"
+    },
+    "is_media": {
+      "type": "boolean",
+      "description": "Whether this tag denotes media content (video, audio, etc.)"
+    },
+    "active": {
+      "type": "boolean",
+      "description": "Whether the tag is currently available for use"
+    },
+    "hotness_mod": {
+      "type": "number",
+      "description": "Hotness score modifier applied to stories with this tag",
+      "minimum": -10,
+      "maximum": 10
+    },
+    "permit_by_new_user": {
+      "type": "boolean",
+      "description": "Whether new users are permitted to apply this tag"
+    },
+    "category": {
+      "type": "string",
+      "description": "Name of the parent category this tag belongs to"
+    }
+  },
+  "required": [
+    "tag",
+    "privileged",
+    "is_media",
+    "active",
+    "hotness_mod",
+    "permit_by_new_user",
+    "category"
+  ]
+}

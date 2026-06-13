@@ -1,0 +1,16 @@
+{
+  "short_id": "xyzpqr",
+  "short_id_url": "https://lobste.rs/c/xyzpqr",
+  "url": "https://lobste.rs/s/abcdef/interesting_advances_in_compiler_optimization#c_xyzpqr",
+  "created_at": "2026-06-10T15:05:00.000Z",
+  "last_edited_at": "2026-06-10T15:05:00.000Z",
+  "is_deleted": false,
+  "is_moderated": false,
+  "score": 8,
+  "flags": 0,
+  "parent_comment": null,
+  "comment": "<p>Great article. The LLVM pass described in section 3 is particularly clever.</p>",
+  "comment_plain": "Great article. The LLVM pass described in section 3 is particularly clever.",
+  "depth": 0,
+  "commenting_user": "bob"
+}

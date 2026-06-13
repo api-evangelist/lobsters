@@ -1,0 +1,14 @@
+{
+  "short_id": "abcdef",
+  "created_at": "2026-06-10T14:23:00.000Z",
+  "title": "Interesting Advances in Compiler Optimization",
+  "url": "https://example.com/compiler-optimization",
+  "score": 47,
+  "flags": 0,
+  "comment_count": 12,
+  "description": null,
+  "description_plain": null,
+  "submitter_user": "alice",
+  "user_is_author": false,
+  "tags": ["compilers", "programming"]
+}

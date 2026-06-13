@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/json-schema/user.json",
+  "title": "User",
+  "description": "A Lobsters community member's public profile",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Unique username for the account"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the account was created"
+    },
+    "is_admin": {
+      "type": "boolean",
+      "description": "Whether the user has administrator privileges"
+    },
+    "is_moderator": {
+      "type": "boolean",
+      "description": "Whether the user has moderator privileges"
+    },
+    "karma": {
+      "type": "integer",
+      "description": "Karma score derived from story and comment votes (omitted for admins)"
+    },
+    "homepage": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "User's personal homepage URL"
+    },
+    "about": {
+      "type": "string",
+      "description": "HTML-rendered about/bio text"
+    },
+    "avatar_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the user's avatar image"
+    },
+    "invited_by_user": {
+      "type": ["string", "null"],
+      "description": "Username of the user who sent the invitation; null for founding members"
+    },
+    "github_username": {
+      "type": "string",
+      "description": "GitHub username if linked (omitted when not set)"
+    },
+    "mastodon_username": {
+      "type": "string",
+      "description": "Mastodon handle if linked (omitted when not set)"
+    }
+  },
+  "required": [
+    "username",
+    "created_at",
+    "is_admin",
+    "is_moderator",
+    "homepage",
+    "about",
+    "avatar_url"
+  ]
+}

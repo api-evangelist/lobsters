@@ -1,0 +1,12 @@
+{
+  "username": "alice",
+  "created_at": "2020-03-15T10:00:00.000Z",
+  "is_admin": false,
+  "is_moderator": false,
+  "karma": 342,
+  "homepage": "https://alice.example.com",
+  "about": "<p>Software engineer interested in compilers and distributed systems.</p>",
+  "avatar_url": "https://lobste.rs/avatars/alice_100.png",
+  "invited_by_user": "charlie",
+  "github_username": "alice-gh"
+}

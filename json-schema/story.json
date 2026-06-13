@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/json-schema/story.json",
+  "title": "Story",
+  "description": "A community-submitted technology link or text post on Lobsters",
+  "type": "object",
+  "properties": {
+    "short_id": {
+      "type": "string",
+      "description": "Short alphanumeric identifier for the story",
+      "maxLength": 6,
+      "example": "abcdef"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the story was submitted"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the story",
+      "minLength": 4,
+      "maxLength": 150
+    },
+    "url": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "URL of the linked resource; null for text-only posts",
+      "maxLength": 250
+    },
+    "score": {
+      "type": "integer",
+      "description": "Net vote score (upvotes minus downvotes)"
+    },
+    "flags": {
+      "type": "integer",
+      "description": "Number of flags the story has received",
+      "minimum": 0
+    },
+    "comment_count": {
+      "type": "integer",
+      "description": "Total number of comments on the story",
+      "minimum": 0
+    },
+    "description": {
+      "type": ["string", "null"],
+      "description": "HTML-rendered description or body text for text posts"
+    },
+    "description_plain": {
+      "type": ["string", "null"],
+      "description": "Plain text description or body text for text posts"
+    },
+    "submitter_user": {
+      "type": "string",
+      "description": "Username of the user who submitted the story"
+    },
+    "user_is_author": {
+      "type": "boolean",
+      "description": "Whether the submitter is the author of the linked content"
+    },
+    "tags": {
+      "type": "array",
+      "description": "List of tag names applied to the story, sorted alphabetically",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "short_id",
+    "created_at",
+    "title",
+    "score",
+    "flags",
+    "comment_count",
+    "submitter_user",
+    "user_is_author",
+    "tags"
+  ]
+}

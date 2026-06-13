@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "lobsters": "https://lobste.rs/",
+    "short_id": "identifier",
+    "submitter_user": "author",
+    "comment_count": "commentCount",
+    "commenting_user": "author",
+    "is_admin": "lobsters:isAdmin",
+    "is_moderator": "lobsters:isModerator",
+    "hotness_mod": "lobsters:hotnessModifier",
+    "permit_by_new_user": "lobsters:permitByNewUser",
+    "invited_by_user": "lobsters:invitedByUser",
+    "user_is_author": "lobsters:userIsAuthor",
+    "is_deleted": "lobsters:isDeleted",
+    "is_moderated": "lobsters:isModerated",
+    "parent_comment": "lobsters:parentComment",
+    "comment_plain": "lobsters:commentPlain",
+    "description_plain": "lobsters:descriptionPlain",
+    "avatar_url": "image",
+    "github_username": "lobsters:githubUsername",
+    "mastodon_username": "lobsters:mastodonUsername",
+    "karma": "lobsters:karma",
+    "flags": "lobsters:flags",
+    "depth": "lobsters:depth",
+    "hotness_mod": "lobsters:hotnessModifier",
+    "is_media": "lobsters:isMedia",
+    "privileged": "lobsters:privileged"
+  },
+  "@graph": [
+    {
+      "@type": "WebAPI",
+      "@id": "https://lobste.rs",
+      "name": "Lobsters API",
+      "description": "Public REST API for the Lobsters technology link aggregation community",
+      "url": "https://lobste.rs",
+      "provider": {
+        "@type": "Organization",
+        "name": "Lobsters",
+        "url": "https://lobste.rs/about"
+      },
+      "documentation": "https://github.com/lobsters/lobsters",
+      "license": "https://github.com/lobsters/lobsters/blob/main/LICENSE",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": "https://lobste.rs/search?q={query}",
+          "query-input": "required name=query"
+        }
+      ]
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://lobste.rs/hottest.json",
+      "name": "Get Hottest Stories",
+      "description": "Returns stories ranked by the Lobsters hotness algorithm",
+      "httpMethod": "GET",
+      "contentType": "application/json",
+      "urlTemplate": "https://lobste.rs/hottest.json{?page}"
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://lobste.rs/newest.json",
+      "name": "Get Newest Stories",
+      "description": "Returns stories sorted by submission time, newest first",
+      "httpMethod": "GET",
+      "contentType": "application/json",
+      "urlTemplate": "https://lobste.rs/newest.json{?page}"
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://lobste.rs/tags.json",
+      "name": "List Tags",
+      "description": "Returns all community taxonomy tags",
+      "httpMethod": "GET",
+      "contentType": "application/json"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Lobsters Tag Taxonomy",
+      "description": "Community-maintained set of tags for categorizing technology stories on Lobsters",
+      "url": "https://lobste.rs/tags"
+    }
+  ]
+}

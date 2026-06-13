@@ -1,0 +1,10 @@
+{
+  "tag": "programming",
+  "description": "General programming topics",
+  "privileged": false,
+  "is_media": false,
+  "active": true,
+  "hotness_mod": 0,
+  "permit_by_new_user": true,
+  "category": "Technology"
+}
