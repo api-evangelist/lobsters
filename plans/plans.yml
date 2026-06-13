@@ -1,0 +1,26 @@
+plans:
+  - name: Free
+    description: >-
+      Lobsters provides its public API at no cost. All public endpoints
+      returning stories, comments, tags, and user profiles are freely
+      accessible without authentication or registration. No commercial
+      pricing tiers exist.
+    url: https://lobste.rs/about
+    authentication:
+      - type: None
+        description: Public read endpoints require no authentication.
+      - type: RSSToken
+        description: >-
+          A private RSS token can be passed as a query parameter to access
+          personalized RSS feeds. The token is available to registered users
+          in their account settings.
+    features:
+      - Public JSON API for stories, comments, tags, and users
+      - Paginated story listings (newest, hottest)
+      - Tag-filtered story feeds
+      - Per-story comment threads
+      - User profile lookup
+      - RSS feeds for public and personalized content
+    limits:
+      - No documented rate limits for public endpoints
+      - No API key required for read access

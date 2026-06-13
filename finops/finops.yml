@@ -1,0 +1,21 @@
+finops:
+  - name: Lobsters FinOps
+    description: >-
+      Lobsters is a free, community-run, open-source platform. There are no
+      API subscription costs, usage-based pricing, or commercial tiers. The
+      platform is funded through community donations and operated as a
+      non-commercial public service. Developers consuming the API incur no
+      direct financial cost.
+    url: https://lobste.rs/about
+    pricing:
+      - type: Free
+        description: All public API endpoints are free with no cost to developers.
+        cost: 0
+        currency: USD
+        unit: request
+    notes:
+      - No API keys to purchase or manage.
+      - No metered billing or usage quotas documented.
+      - The source code is open-source (3-clause BSD license) and can be
+        self-hosted at the operator's own infrastructure cost.
+      - Community donations support the hosted lobste.rs instance.

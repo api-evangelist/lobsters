@@ -1,0 +1,67 @@
+aid: lobsters
+name: Lobsters
+description: >-
+  Lobsters is a technology-focused link aggregation and community discussion
+  platform. Its public REST API provides access to stories, comments, tags,
+  and user profiles, returning JSON representations of community-submitted
+  technology links, ranked and filtered by the community.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+type: Index
+tags:
+  - Link Aggregation
+  - Community
+  - Technology
+  - News
+  - Stories
+  - Comments
+  - Tags
+apis:
+  - name: Lobsters API
+    description: >-
+      The Lobsters public API provides read access to stories, comments, tags,
+      and user profiles from the technology-focused link aggregation community.
+      Endpoints return JSON and are available without authentication for public
+      data. Stories can be retrieved by newest or hottest ranking, filtered by
+      tag, and paginated by page number.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://lobste.rs
+    baseURL: https://lobste.rs
+    tags:
+      - Stories
+      - Comments
+      - Tags
+      - Users
+      - Link Aggregation
+    properties:
+      - type: Documentation
+        url: https://github.com/lobsters/lobsters
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/openapi.yml
+      - type: GitHubRepository
+        url: https://github.com/lobsters/lobsters
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/rate-limits/rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: Lobsters
+        url: https://lobste.rs/about
+common:
+  - type: GitHub
+    url: https://github.com/lobsters/lobsters
+  - type: About
+    url: https://lobste.rs/about
+  - type: Tags
+    url: https://lobste.rs/tags
+  - type: RSS
+    url: https://lobste.rs/rss
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
+    email: info@apievangelist.com

@@ -1,0 +1,21 @@
+rateLimits:
+  - name: Public API Rate Limit
+    description: >-
+      Lobsters does not publish explicit rate limits for its public JSON API
+      endpoints. The platform is a community-run open-source Rails application
+      with no documented throttling for read endpoints. Excessive automated
+      requests may be blocked at the server or infrastructure level at the
+      operators' discretion. Respectful use and reasonable request pacing are
+      expected by community norms.
+    url: https://lobste.rs/about
+    limits:
+      - type: Requests
+        description: No published numeric rate limit for public read endpoints.
+        period: unknown
+        quota: undocumented
+    notes:
+      - No rate-limit response headers documented.
+      - The anti-enumeration logic in the application may return randomized
+        responses to outdated or suspicious user agents.
+      - RSS token-authenticated feeds are available to registered users for
+        personalized content without scraping.
