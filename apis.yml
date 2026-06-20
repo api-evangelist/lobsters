@@ -5,7 +5,7 @@ description: >-
   platform. Its public REST API provides access to stories, comments, tags,
   and user profiles, returning JSON representations of community-submitted
   technology links, ranked and filtered by the community.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/apis.yml
 created: "2026-06-13"
 modified: "2026-06-13"
@@ -27,7 +27,7 @@ apis:
       Endpoints return JSON and are available without authentication for public
       data. Stories can be retrieved by newest or hottest ranking, filtered by
       tag, and paginated by page number.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://lobste.rs
     baseURL: https://lobste.rs
     tags:
