@@ -53,6 +53,10 @@ apis:
       - FN: Lobsters
         url: https://lobste.rs/about
 common:
+  - type: VulnerabilityDisclosure
+    url: security/lobsters-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/lobsters-domain-security.yml
   - type: GitHub
     url: https://github.com/lobsters/lobsters
   - type: About
