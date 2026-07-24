@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Lobsters Comments Tags API
+  description: The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.
+  version: 1.0.0
+  contact:
+    url: https://lobste.rs/about
+  license:
+    name: BSD 3-Clause
+    url: https://github.com/lobsters/lobsters/blob/main/LICENSE
+servers:
+- url: https://lobste.rs
+  description: Lobsters production server
+tags:
+- name: Tags
+  description: Community-maintained taxonomy tags for categorizing stories
+paths:
+  /tags.json:
+    get:
+      operationId: getTags
+      summary: List all tags
+      description: Returns a list of all active and inactive tags with their metadata, including category, description, and moderation attributes.
+      tags:
+      - Tags
+      responses:
+        '200':
+          description: List of all tags
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Tag'
+components:
+  schemas:
+    Tag:
+      type: object
+      description: A community-maintained taxonomy tag for categorizing stories
+      properties:
+        tag:
+          type: string
+          description: Unique tag identifier/slug
+          pattern: ^[A-Za-z0-9_\-+]+$
+          example: programming
+        description:
+          type: string
+          description: Short human-readable description of what the tag covers
+          example: General programming topics
+        privileged:
+          type: boolean
+          description: Whether this tag can only be applied by moderators
+        is_media:
+          type: boolean
+          description: Whether this tag denotes media content (video, audio, etc.)
+        active:
+          type: boolean
+          description: Whether the tag is currently available for use
+        hotness_mod:
+          type: number
+          description: Hotness score modifier applied to stories with this tag (-10 to 10)
+          minimum: -10
+          maximum: 10
+        permit_by_new_user:
+          type: boolean
+          description: Whether new users are permitted to apply this tag
+        category:
+          type: string
+          description: Name of the parent category this tag belongs to
+          example: Technology
+      required:
+      - tag
+      - privileged
+      - is_media
+      - active
+      - hotness_mod
+      - permit_by_new_user
+      - category

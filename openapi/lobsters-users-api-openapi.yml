@@ -1,0 +1,95 @@
+openapi: 3.1.0
+info:
+  title: Lobsters Comments Users API
+  description: The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.
+  version: 1.0.0
+  contact:
+    url: https://lobste.rs/about
+  license:
+    name: BSD 3-Clause
+    url: https://github.com/lobsters/lobsters/blob/main/LICENSE
+servers:
+- url: https://lobste.rs
+  description: Lobsters production server
+tags:
+- name: Users
+  description: Lobsters user profiles
+paths:
+  /~{username}.json:
+    get:
+      operationId: getUser
+      summary: Get a user profile
+      description: Returns a user's public profile including karma, about text, avatar, and invitation lineage.
+      tags:
+      - Users
+      parameters:
+      - name: username
+        in: path
+        description: Lobsters username
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: User profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: User not found
+components:
+  schemas:
+    User:
+      type: object
+      description: A Lobsters community member's public profile
+      properties:
+        username:
+          type: string
+          description: Unique username for the account
+          example: alice
+        created_at:
+          type: string
+          format: date-time
+          description: ISO 8601 timestamp when the account was created
+        is_admin:
+          type: boolean
+          description: Whether the user has administrator privileges
+        is_moderator:
+          type: boolean
+          description: Whether the user has moderator privileges
+        karma:
+          type: integer
+          description: Karma score derived from story and comment votes (omitted for admins)
+        homepage:
+          type: string
+          format: uri
+          nullable: true
+          description: User's personal homepage URL
+        about:
+          type: string
+          description: HTML-rendered about/bio text
+        avatar_url:
+          type: string
+          format: uri
+          description: URL of the user's avatar image
+        invited_by_user:
+          type: string
+          nullable: true
+          description: Username of the user who sent the invitation; null for founding members
+        github_username:
+          type: string
+          nullable: true
+          description: GitHub username if linked (omitted when not set)
+        mastodon_username:
+          type: string
+          nullable: true
+          description: Mastodon handle if linked (omitted when not set)
+      required:
+      - username
+      - created_at
+      - is_admin
+      - is_moderator
+      - homepage
+      - about
+      - avatar_url
