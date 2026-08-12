@@ -125,6 +125,12 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/finops/finops.yml
 common:
+  - type: IssueTracker
+    url: https://github.com/lobsters/lobsters/issues
+  - type: SecurityPolicy
+    url: https://github.com/lobsters/lobsters/blob/main/SECURITY.md
+  - type: ContributionGuide
+    url: https://github.com/lobsters/lobsters/blob/main/CONTRIBUTING.md
   - type: AgenticAccess
     url: agentic-access/lobsters-agentic-access.yml
   - type: VulnerabilityDisclosure
