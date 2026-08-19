@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lobsters Comments API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Comments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a comment by short ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/c/:short_id.json",
+            "params": [
+              {
+                "name": "short_id",
+                "value": "",
+                "type": "path",
+                "description": "Short alphanumeric identifier for the comment"
+              }
+            ]
+          },
+          "docs": "Returns a single comment by its short identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

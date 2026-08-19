@@ -1,0 +1,102 @@
+{
+  "item": [
+    {
+      "id": "7b91ade0-c1b6-4ec7-8abe-dcf0e8bbbaf3",
+      "name": "Tags",
+      "description": {
+        "content": "Community-maintained taxonomy tags for categorizing stories",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "387da59d-df9f-4311-a062-8ead339095be",
+          "name": "List all tags",
+          "request": {
+            "name": "List all tags",
+            "description": {
+              "content": "Returns a list of all active and inactive tags with their metadata, including category, description, and moderation attributes.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tags.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "abf0bb93-c731-4767-b9d4-307a3e5574a5",
+              "name": "List of all tags",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"tag\": \"programming\",\n    \"privileged\": true,\n    \"is_media\": false,\n    \"active\": true,\n    \"hotness_mod\": -7.9407966735706275,\n    \"permit_by_new_user\": false,\n    \"category\": \"Technology\",\n    \"description\": \"General programming topics\"\n  },\n  {\n    \"tag\": \"programming\",\n    \"privileged\": false,\n    \"is_media\": false,\n    \"active\": false,\n    \"hotness_mod\": 3.804412709383456,\n    \"permit_by_new_user\": false,\n    \"category\": \"Technology\",\n    \"description\": \"General programming topics\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://lobste.rs",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e2f14769-98c6-4420-b020-c6aad8e5e7e9",
+    "name": "Lobsters Comments Tags API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.",
+      "type": "text/plain"
+    }
+  }
+}

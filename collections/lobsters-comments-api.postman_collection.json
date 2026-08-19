@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "8745f609-737a-4715-80d9-029cd980da96",
+      "name": "Comments",
+      "description": {
+        "content": "Community discussion comments on stories",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "05603a0f-54d8-4226-a8e9-1d9c239ac632",
+          "name": "Get a comment by short ID",
+          "request": {
+            "name": "Get a comment by short ID",
+            "description": {
+              "content": "Returns a single comment by its short identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "c",
+                "{{short_id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0ce1ecbd-7138-4ed9-95d0-0a7be3b00619",
+              "name": "Comment object",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "c",
+                    "{{short_id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"short_id\": \"string\",\n  \"short_id_url\": \"https://qiXGiTz.thenvZMh5QNVFxNoCTI5\",\n  \"url\": \"http://gshjowDPGqrbbTEP.ntgqMgvpo5xz\",\n  \"created_at\": \"2006-07-12T10:11:29.118Z\",\n  \"last_edited_at\": \"2022-10-15T02:45:38.009Z\",\n  \"is_deleted\": true,\n  \"is_moderated\": false,\n  \"score\": 2895,\n  \"flags\": 5325,\n  \"comment\": \"string\",\n  \"comment_plain\": \"string\",\n  \"depth\": 4675,\n  \"commenting_user\": \"string\",\n  \"parent_comment\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2051248e-2943-4535-800a-49528513e5bd",
+              "name": "Comment not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "c",
+                    "{{short_id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://lobste.rs",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Short alphanumeric identifier for the comment",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "short_id"
+    }
+  ],
+  "info": {
+    "_postman_id": "e869b772-4e3e-4795-b39a-acdcdb9d3ac0",
+    "name": "Lobsters Comments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.",
+      "type": "text/plain"
+    }
+  }
+}

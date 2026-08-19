@@ -1,0 +1,141 @@
+{
+  "item": [
+    {
+      "id": "7b9cc2a1-f49c-40a0-ac23-35d5bb0e1798",
+      "name": "Users",
+      "description": {
+        "content": "Lobsters user profiles",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3cd47a5e-700d-4b76-b1b2-eab6e0523516",
+          "name": "Get a user profile",
+          "request": {
+            "name": "Get a user profile",
+            "description": {
+              "content": "Returns a user's public profile including karma, about text, avatar, and invitation lineage.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "~{{username}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29751652-7919-45e1-8f82-34797e19d87b",
+              "name": "User profile",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "~{{username}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"username\": \"alice\",\n  \"created_at\": \"1950-02-14T00:53:46.361Z\",\n  \"is_admin\": true,\n  \"is_moderator\": true,\n  \"homepage\": \"http://bYtrGnfCGIaYEJKlkK.kkO,C-M,5haFt\",\n  \"about\": \"string\",\n  \"avatar_url\": \"https://DyiClXqgpXuYdMspbQbyqNJQnpb.rbtclz7bJEMKFAw22kTiyxZHMrRKeskFfKwOPJupNmOGvijpNJFkXU,na2DbXUu+Tbu\",\n  \"karma\": 3574,\n  \"invited_by_user\": \"string\",\n  \"github_username\": \"string\",\n  \"mastodon_username\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "448c6fc2-ddc5-4ba3-9064-15a03b1fddd8",
+              "name": "User not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "~{{username}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://lobste.rs",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Lobsters username",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "username"
+    }
+  ],
+  "info": {
+    "_postman_id": "e4800ae5-fa61-4a3b-a65d-bc5a05be914e",
+    "name": "Lobsters Comments Users API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.",
+      "type": "text/plain"
+    }
+  }
+}

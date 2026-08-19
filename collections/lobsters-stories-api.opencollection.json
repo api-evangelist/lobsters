@@ -1,0 +1,119 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lobsters Comments Stories API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Stories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get hottest stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/hottest.json",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination (1-indexed)"
+              }
+            ]
+          },
+          "docs": "Returns a paginated list of stories sorted by the hotness algorithm, combining score, age, and community activity. This is the default front page ranking."
+        },
+        {
+          "info": {
+            "name": "Get newest stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/newest.json",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination (1-indexed)"
+              }
+            ]
+          },
+          "docs": "Returns a paginated list of stories sorted by submission time, newest first."
+        },
+        {
+          "info": {
+            "name": "Get active discussion stories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/active.json",
+            "params": [
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination (1-indexed)"
+              }
+            ]
+          },
+          "docs": "Returns stories with recent comment activity, sorted by latest discussion time."
+        },
+        {
+          "info": {
+            "name": "Get stories by tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/t/:tag.json",
+            "params": [
+              {
+                "name": "tag",
+                "value": "",
+                "type": "path",
+                "description": "Tag identifier (e.g. \"programming\", \"security\")"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number for pagination (1-indexed)"
+              }
+            ]
+          },
+          "docs": "Returns a paginated list of hottest stories filtered to a specific tag."
+        },
+        {
+          "info": {
+            "name": "Get a story by short ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/s/:short_id.json",
+            "params": [
+              {
+                "name": "short_id",
+                "value": "",
+                "type": "path",
+                "description": "Short alphanumeric identifier for the story (e.g. \"abcdef\")"
+              }
+            ]
+          },
+          "docs": "Returns a single story and its nested comment thread by the story's short identifier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

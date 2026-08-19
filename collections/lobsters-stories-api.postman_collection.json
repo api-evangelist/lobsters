@@ -1,0 +1,519 @@
+{
+  "item": [
+    {
+      "id": "bd1c6539-be8b-41f9-bbf1-e6ccca2d5adf",
+      "name": "Stories",
+      "description": {
+        "content": "Technology link aggregation stories submitted by the community",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3160dd27-0e1d-4fb7-9086-052ec8b4eda0",
+          "name": "Get hottest stories",
+          "request": {
+            "name": "Get hottest stories",
+            "description": {
+              "content": "Returns a paginated list of stories sorted by the hotness algorithm, combining score, age, and community activity. This is the default front page ranking.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "hottest.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination (1-indexed)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5d103ef9-0c28-40a7-bea6-f8c9bee7c51d",
+              "name": "List of hottest stories",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "hottest.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1952-04-17T20:39:41.968Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 8477,\n    \"flags\": 7578,\n    \"comment_count\": 2545,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": false,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"https://QsVZ.fcsdSf4XUscklf8pybQTIT++3hYsgDWm2fBI4jK1enCyxMS4dTSqlVEypPD++3ZaOODWkP6eo-Rkk+RCzbNlMw,\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  },\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1982-11-09T10:00:56.132Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 5238,\n    \"flags\": 2561,\n    \"comment_count\": 7289,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": true,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"http://QzKR.cuyegDa5hh3+ZnHMqJlodNfrWksCz7NAfmOcpZK\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6cbdfb60-1b3b-4baf-86c7-fd8ef7f9b2b9",
+          "name": "Get newest stories",
+          "request": {
+            "name": "Get newest stories",
+            "description": {
+              "content": "Returns a paginated list of stories sorted by submission time, newest first.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "newest.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination (1-indexed)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "432aa3db-21e3-45a1-b9bf-2cda828073bf",
+              "name": "List of newest stories",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "newest.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1952-04-17T20:39:41.968Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 8477,\n    \"flags\": 7578,\n    \"comment_count\": 2545,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": false,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"https://QsVZ.fcsdSf4XUscklf8pybQTIT++3hYsgDWm2fBI4jK1enCyxMS4dTSqlVEypPD++3ZaOODWkP6eo-Rkk+RCzbNlMw,\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  },\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1982-11-09T10:00:56.132Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 5238,\n    \"flags\": 2561,\n    \"comment_count\": 7289,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": true,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"http://QzKR.cuyegDa5hh3+ZnHMqJlodNfrWksCz7NAfmOcpZK\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7e51960a-26ff-4ed2-b6a3-640a317306e7",
+          "name": "Get active discussion stories",
+          "request": {
+            "name": "Get active discussion stories",
+            "description": {
+              "content": "Returns stories with recent comment activity, sorted by latest discussion time.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "active.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination (1-indexed)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "663ec114-c346-4c3c-a0f5-11996677b4c7",
+              "name": "List of stories with active discussions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "active.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1952-04-17T20:39:41.968Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 8477,\n    \"flags\": 7578,\n    \"comment_count\": 2545,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": false,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"https://QsVZ.fcsdSf4XUscklf8pybQTIT++3hYsgDWm2fBI4jK1enCyxMS4dTSqlVEypPD++3ZaOODWkP6eo-Rkk+RCzbNlMw,\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  },\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1982-11-09T10:00:56.132Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 5238,\n    \"flags\": 2561,\n    \"comment_count\": 7289,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": true,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"http://QzKR.cuyegDa5hh3+ZnHMqJlodNfrWksCz7NAfmOcpZK\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db2c32e7-8559-4039-83b7-2ad7a7678192",
+          "name": "Get stories by tag",
+          "request": {
+            "name": "Get stories by tag",
+            "description": {
+              "content": "Returns a paginated list of hottest stories filtered to a specific tag.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "t",
+                "{{tag}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number for pagination (1-indexed)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "80ec9f17-1b7c-46ed-bbcf-32abf96d645c",
+              "name": "List of stories with the specified tag",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "t",
+                    "{{tag}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1952-04-17T20:39:41.968Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 8477,\n    \"flags\": 7578,\n    \"comment_count\": 2545,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": false,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"https://QsVZ.fcsdSf4XUscklf8pybQTIT++3hYsgDWm2fBI4jK1enCyxMS4dTSqlVEypPD++3ZaOODWkP6eo-Rkk+RCzbNlMw,\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  },\n  {\n    \"short_id\": \"abcdef\",\n    \"created_at\": \"1982-11-09T10:00:56.132Z\",\n    \"title\": \"Interesting technology article\",\n    \"score\": 5238,\n    \"flags\": 2561,\n    \"comment_count\": 7289,\n    \"submitter_user\": \"alice\",\n    \"user_is_author\": true,\n    \"tags\": [\n      \"programming\",\n      \"security\"\n    ],\n    \"url\": \"http://QzKR.cuyegDa5hh3+ZnHMqJlodNfrWksCz7NAfmOcpZK\",\n    \"description\": \"string\",\n    \"description_plain\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7004fb2e-4291-42f6-9249-a63031e6b52e",
+              "name": "Tag not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "t",
+                    "{{tag}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9eff841e-9d69-417c-8928-68e8d9fc6cf8",
+          "name": "Get a story by short ID",
+          "request": {
+            "name": "Get a story by short ID",
+            "description": {
+              "content": "Returns a single story and its nested comment thread by the story's short identifier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "s",
+                "{{short_id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "43ea0c15-5802-4486-8992-9437a391910e",
+              "name": "Story with nested comments",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "s",
+                    "{{short_id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"short_id\": \"abcdef\",\n  \"created_at\": \"1988-04-07T23:27:28.241Z\",\n  \"title\": \"Interesting technology article\",\n  \"score\": 8964,\n  \"flags\": 9935,\n  \"comment_count\": 267,\n  \"submitter_user\": \"alice\",\n  \"user_is_author\": true,\n  \"tags\": [\n    \"programming\",\n    \"security\"\n  ],\n  \"url\": \"https://LXosfRvKFhmFaOVrYVwudLHhOx.uyeex+LF5O2AvN8,OXQ.QbxARfgvK4fJO+h.xSiEfdD18VsCnATqbavqXR+XRuJelu0enAu\",\n  \"description\": \"string\",\n  \"description_plain\": \"string\",\n  \"comments\": [\n    {\n      \"short_id\": \"string\",\n      \"short_id_url\": \"http://dUlIxSdbhTOThuqorsdKJtBkJgnxH.amxx8g-WWE\",\n      \"url\": \"https://fkBebuGgsyIFaaKvbQGbSSifrUJrTD.sye5yNr\",\n      \"created_at\": \"2000-02-28T17:43:54.465Z\",\n      \"last_edited_at\": \"2002-01-16T08:23:12.700Z\",\n      \"is_deleted\": true,\n      \"is_moderated\": false,\n      \"score\": 3950,\n      \"flags\": 4639,\n      \"comment\": \"string\",\n      \"comment_plain\": \"string\",\n      \"depth\": 9361,\n      \"commenting_user\": \"string\",\n      \"parent_comment\": \"string\"\n    },\n    {\n      \"short_id\": \"string\",\n      \"short_id_url\": \"https://yCXXbe.fscckKJ4aVDt+i.bj-4zdX71b8Ap,plb9CRRAczwFsCyirt39rRuLzIIwGIlhEPGoT5j,,su\",\n      \"url\": \"http://aaaXrHqFyftDQhzeLGQqOydaTLpEByBe.jbqHQiwVYfTp5us,Wgtvf.lK7f\",\n      \"created_at\": \"2009-04-30T16:41:38.849Z\",\n      \"last_edited_at\": \"1990-09-22T23:53:55.622Z\",\n      \"is_deleted\": false,\n      \"is_moderated\": false,\n      \"score\": 3256,\n      \"flags\": 1587,\n      \"comment\": \"string\",\n      \"comment_plain\": \"string\",\n      \"depth\": 7069,\n      \"commenting_user\": \"string\",\n      \"parent_comment\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d33aedcc-e52e-48ef-b077-1261c5c31cb4",
+              "name": "Story not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "s",
+                    "{{short_id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://lobste.rs",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Tag identifier (e.g. \"programming\", \"security\")",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "tag"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Short alphanumeric identifier for the story (e.g. \"abcdef\")",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "short_id"
+    }
+  ],
+  "info": {
+    "_postman_id": "5bb090aa-3c29-4b44-bf2e-ab484705396d",
+    "name": "Lobsters Comments Stories API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.",
+      "type": "text/plain"
+    }
+  }
+}

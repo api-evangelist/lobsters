@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lobsters Comments Tags API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Tags",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/tags.json"
+          },
+          "docs": "Returns a list of all active and inactive tags with their metadata, including category, description, and moderation attributes."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

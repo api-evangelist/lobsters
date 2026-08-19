@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lobsters Comments Users API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a user profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://lobste.rs/~:username.json",
+            "params": [
+              {
+                "name": "username",
+                "value": "",
+                "type": "path",
+                "description": "Lobsters username"
+              }
+            ]
+          },
+          "docs": "Returns a user's public profile including karma, about text, avatar, and invitation lineage."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
