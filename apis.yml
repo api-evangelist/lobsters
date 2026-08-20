@@ -107,6 +107,8 @@ apis:
   humanURL: https://lobste.rs
   baseURL: https://lobste.rs
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
