@@ -5,6 +5,19 @@ description: >-
   platform. Its public REST API provides access to stories, comments, tags,
   and user profiles, returning JSON representations of community-submitted
   technology links, ranked and filtered by the community.
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
