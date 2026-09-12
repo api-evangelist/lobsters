@@ -140,6 +140,8 @@ apis:
     url: >-
       https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/finops/finops.yml
 common:
+  - type: Website
+    url: https://www.lobste.rs/
   - type: IssueTracker
     url: https://github.com/lobsters/lobsters/issues
   - type: SecurityPolicy
