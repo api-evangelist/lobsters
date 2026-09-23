@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Lobsters Comments Tags API
+  title: Lobsters Tags API
   description: The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by hottest or newest ranking, filtered by tag, and paginated by page number.
   version: 1.0.0
   contact:

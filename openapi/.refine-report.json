@@ -1,10 +1,7 @@
 {
   "provider": "lobsters",
   "sources": [
-    "lobsters-comments-api-openapi.yml",
-    "lobsters-stories-api-openapi.yml",
-    "lobsters-tags-api-openapi.yml",
-    "lobsters-users-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "lobsters-comments-api-openapi.yml",
@@ -15,6 +12,15 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "lobsters-comments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "lobsters-stories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "lobsters-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "lobsters-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
