@@ -158,69 +158,6 @@ paths:
           description: Story not found
 components:
   schemas:
-    Story:
-      type: object
-      description: A community-submitted technology link or text post
-      properties:
-        short_id:
-          type: string
-          description: Short alphanumeric identifier for the story
-          example: abcdef
-        created_at:
-          type: string
-          format: date-time
-          description: ISO 8601 timestamp when the story was submitted
-        title:
-          type: string
-          description: Title of the story
-          example: Interesting technology article
-        url:
-          type: string
-          format: uri
-          nullable: true
-          description: URL of the linked resource; null for text-only posts
-        score:
-          type: integer
-          description: Net vote score (upvotes minus downvotes)
-        flags:
-          type: integer
-          description: Number of flags the story has received
-        comment_count:
-          type: integer
-          description: Total number of comments on the story
-        description:
-          type: string
-          description: HTML-rendered description or body text for text posts
-          nullable: true
-        description_plain:
-          type: string
-          description: Plain text description or body text for text posts
-          nullable: true
-        submitter_user:
-          type: string
-          description: Username of the user who submitted the story
-          example: alice
-        user_is_author:
-          type: boolean
-          description: Whether the submitter is the author of the linked content
-        tags:
-          type: array
-          description: List of tag names applied to the story, sorted alphabetically
-          items:
-            type: string
-          example:
-          - programming
-          - security
-      required:
-      - short_id
-      - created_at
-      - title
-      - score
-      - flags
-      - comment_count
-      - submitter_user
-      - user_is_author
-      - tags
     Comment:
       type: object
       description: A community discussion comment on a story
@@ -286,3 +223,66 @@ components:
       - comment_plain
       - depth
       - commenting_user
+    Story:
+      type: object
+      description: A community-submitted technology link or text post
+      properties:
+        short_id:
+          type: string
+          description: Short alphanumeric identifier for the story
+          example: abcdef
+        created_at:
+          type: string
+          format: date-time
+          description: ISO 8601 timestamp when the story was submitted
+        title:
+          type: string
+          description: Title of the story
+          example: Interesting technology article
+        url:
+          type: string
+          format: uri
+          nullable: true
+          description: URL of the linked resource; null for text-only posts
+        score:
+          type: integer
+          description: Net vote score (upvotes minus downvotes)
+        flags:
+          type: integer
+          description: Number of flags the story has received
+        comment_count:
+          type: integer
+          description: Total number of comments on the story
+        description:
+          type: string
+          description: HTML-rendered description or body text for text posts
+          nullable: true
+        description_plain:
+          type: string
+          description: Plain text description or body text for text posts
+          nullable: true
+        submitter_user:
+          type: string
+          description: Username of the user who submitted the story
+          example: alice
+        user_is_author:
+          type: boolean
+          description: Whether the submitter is the author of the linked content
+        tags:
+          type: array
+          description: List of tag names applied to the story, sorted alphabetically
+          items:
+            type: string
+          example:
+          - programming
+          - security
+      required:
+      - short_id
+      - created_at
+      - title
+      - score
+      - flags
+      - comment_count
+      - submitter_user
+      - user_is_author
+      - tags

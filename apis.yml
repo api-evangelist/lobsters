@@ -7,6 +7,10 @@ description: >-
   technology links, ranked and filtered by the community.
 deliveryModel:
   model: unknown
+  license_evidence:
+    repo: lobsters/lobsters
+    spdx: NOASSERTION
+    stars: 4842
   open_source: unknown
   commercial: true
   callable_host: true
@@ -16,7 +20,7 @@ deliveryModel:
   - openapi
   - pricing
   - repository-unlicensed
-  generated: '2026-08-28'
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: free
@@ -49,7 +53,6 @@ apis:
   name: Lobsters Comments API
   description: Community discussion comments on stories
   humanURL: https://lobste.rs
-  baseURL: https://lobste.rs
   tags:
   - Comments
   properties:
@@ -72,7 +75,6 @@ apis:
   name: Lobsters Stories API
   description: Technology link aggregation stories submitted by the community
   humanURL: https://lobste.rs
-  baseURL: https://lobste.rs
   tags:
   - Stories
   properties:
@@ -95,7 +97,6 @@ apis:
   name: Lobsters Tags API
   description: Community-maintained taxonomy tags for categorizing stories
   humanURL: https://lobste.rs
-  baseURL: https://lobste.rs
   tags:
   - Tags
   properties:
@@ -118,7 +119,6 @@ apis:
   name: Lobsters Users API
   description: Lobsters user profiles
   humanURL: https://lobste.rs
-  baseURL: https://lobste.rs
   tags:
   - User
   tags_raw:
