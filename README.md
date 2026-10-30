@@ -1,4 +1,4 @@
-# Lobsters (lobsters)
+# Lobsters
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,62 +66,148 @@
 
 Lobsters is a technology-focused link aggregation and community discussion platform. Its public REST API provides access to stories, comments, tags, and user profiles, returning JSON representations of community-submitted technology links, ranked and filtered by the community.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/apis.yml)
+**Areas:** Link Aggregation · Community · Technology · News · Stories · Comments · Tags
 
-## Scope
+## Lobsters on APIs.io
 
-- **Type:** Index
+Everything profiled for Lobsters is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lobsters/](https://apis.io/providers/lobsters/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Link Aggregation
-- Community
-- Technology
-- News
-- Stories
-- Comments
-- Tags
+- [Lobsters Comments API](https://apis.io/apis/lobsters/lobsters-comments-api/) — Community discussion comments on stories
+- [Lobsters Stories API](https://apis.io/apis/lobsters/lobsters-stories-api/) — Technology link aggregation stories submitted by the community
+- [Lobsters Tags API](https://apis.io/apis/lobsters/lobsters-tags-api/) — Community-maintained taxonomy tags for categorizing stories
+- [Lobsters Users API](https://apis.io/apis/lobsters/lobsters-users-api/) — Lobsters user profiles
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Lobsters API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Lobsters public API provides read access to stories, comments, tags, and user profiles from the technology-focused link aggregation community. Endpoints return JSON and are available without authentication for public data. Stories can be retrieved by newest or hottest ranking, filtered by tag, and paginated by page number.
+- [Lobsters Agentic Access](https://apis.io/agentic-access/lobsters/lobsters-agentic-access/)
 
-- **Human URL:** [https://lobste.rs](https://lobste.rs)
-- **Base URL:** `https://lobste.rs`
+#### JSON Schema (4)
 
-#### Tags
+The data models the API reads and writes.
 
-- Stories
-- Comments
-- Tags
-- Users
-- Link Aggregation
+- [Comment](https://apis.io/schemas/lobsters/comment/)
+- [Story](https://apis.io/schemas/lobsters/story/)
+- [Tag](https://apis.io/schemas/lobsters/tag/)
+- [User](https://apis.io/schemas/lobsters/user/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://github.com/lobsters/lobsters)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [GitHub Repository](https://github.com/lobsters/lobsters)
-- [Plans](https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/plans/plans.yml)
-- [Rate Limits](https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/rate-limits/rate-limits.yml)
-- [Fin Ops](https://raw.githubusercontent.com/api-evangelist/lobsters/refs/heads/main/finops/finops.yml)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [Lobsters Context](https://apis.io/jsonld/lobsters/lobsters/)
 
-- [Git Hub](https://github.com/lobsters/lobsters)
-- [About](https://lobste.rs/about)
-- [Tags](https://lobste.rs/tags)
-- [R S S](https://lobste.rs/rss)
+#### Examples (4)
 
-## Maintainers
+Example requests and responses.
 
-**FN:** API Evangelist
-**Email:** info@apievangelist.com
-**URL:** https://apievangelist.com
+- [Comment](https://apis.io/examples/lobsters/comment/)
+- [Story](https://apis.io/examples/lobsters/story/)
+- [Tag](https://apis.io/examples/lobsters/tag/)
+- [User](https://apis.io/examples/lobsters/user/)
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [Lobsters Comments API](https://apis.io/collections/lobsters/open-lobsters-comments-api/)
+- [Lobsters Comments Stories API](https://apis.io/collections/lobsters/open-lobsters-stories-api/)
+- [Lobsters Comments Tags API](https://apis.io/collections/lobsters/open-lobsters-tags-api/)
+- [Lobsters Comments Users API](https://apis.io/collections/lobsters/open-lobsters-users-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Lobsters — jsonschema rules](https://apis.io/rules/lobsters/lobsters-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lobsters Domain Security](https://apis.io/security/lobsters/lobsters-domain-security/)
+- [Lobsters Vulnerability Disclosure](https://apis.io/security/lobsters/lobsters-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/lobsters/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/lobsters/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/lobsters/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lobste.rs/)
+
+## API Evangelist rating
+
+**Kin Score 25.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 51.4 |
+| Contract governance | 9.8 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 5.3 |
+
+**Agent readiness 20.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lobsters/](https://apis.io/providers/lobsters/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lobsters: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lobsters/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
